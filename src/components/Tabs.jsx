@@ -11,8 +11,7 @@ const Tabs = ({ currentTab }) => {
     const dispatch = useDispatch();
 
     return (
-       <div>
-         {TABS.map(tab => (
+        TABS.map(tab => (
             <button
                 className={tab === currentTab ? 'button selected' : 'button'}
                 onClick={() => dispatch(toggleTab(tab))}
@@ -20,8 +19,6 @@ const Tabs = ({ currentTab }) => {
                 {tab}
             </button>
         ))
-         }
-       </div>
     )
 }
 
